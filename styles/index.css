@@ -1,0 +1,186 @@
+body{
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+p{
+  margin: 0;
+}
+h1{
+  margin: 0;
+}
+.top-section{
+  background-image: url('../images/pattern-bg-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 13.2em;
+  z-index: 1;
+}
+.search-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-title{
+  color: white;
+  font-size: 1.45em;
+  font-weight: 420;
+  margin-block-start: 1em;
+  margin-block-end: 0.8em;
+}
+.search-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar{
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  width: 21.4em;
+  padding-block-start: 0.65em;
+  padding-block-end: 0.65em;
+  padding-inline-start: 0.9em;
+  padding-inline-end: 0.6em;
+  font-size: 1.125em;
+  border: none;
+  border-bottom-left-radius: 0.66em;
+  border-top-left-radius: 0.66em;
+  font-weight: 340;
+  cursor: pointer;
+}
+.search-bar::placeholder{
+  font-size: 0.8em;
+  color: hsl(0, 0%, 58%);
+  font-weight: 350;
+}
+.search-bar:focus{
+  outline: none;
+}
+.search-button{
+  background-color: hsl(0, 0%, 17%);
+  border: none;
+  padding-inline-start: 1.045em;
+  padding-inline-end: 1.25em;
+  padding-block-end: 1.025em;
+  padding-block-start: 1.025em;
+  border-bottom-right-radius: 0.66em;
+  border-top-right-radius: 0.66em;
+  cursor: pointer;
+}
+.search-button:hover{
+  background-color: hsl(0, 0%, 26%);
+}
+.ip-info{
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  position: absolute;
+  top: 9.375em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-block-start: 1.375em;
+  padding-block-end: 1.375em;
+  border-radius: 0.75em;
+  box-shadow: 0 0 0.25em rgba(0,0,0,0.3);
+  z-index: 2;
+}
+.ip-tracked-address,.ip-tracked-location,
+.ip-tracked-timezone,.ip-tracked-isp{
+  width: 12.5em;
+  overflow-wrap: break-word;
+  padding-inline-start: 1.25em;
+}
+.ip-tracked-address,.ip-tracked-location,
+.ip-tracked-timezone{
+  border-right: 0.0625em solid hsl(0, 0%, 81%);
+}
+.ip-address,.ip-location,
+.ip-timezone,.ip-isp{
+  color: hsl(0, 0%, 58%);
+  font-size: 0.65em;
+  margin-block-end: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.095rem;
+}
+.ip-details-address,.ip-details-location,
+.ip-details-timezone,.ip-details-isp{
+  width: 11.25rem;
+  font-size: 1.3em;
+  font-weight: 420;
+}
+.bottom-section{
+  width: 100%;
+  height: calc(100vh - 17.6em);
+  z-index: 0;
+}
+.error{
+  width: 55.25rem;
+  height: 6.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: 420;
+  top: 9.375rem;
+}
+@media (max-width:56.25em){
+  .top-section{
+    height: 16.25em;
+  }
+  .search-box{
+    display: flex;
+    flex: 1;
+  }
+  .search-bar{
+    width: fit-content;
+    min-width: 24ch;
+  }
+  .ip-info{
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+  .ip-tracked-address,.ip-tracked-location,
+  .ip-tracked-timezone,.ip-tracked-isp{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: auto;
+  }
+  .ip-tracked-address,.ip-tracked-location,
+  .ip-tracked-timezone{
+    margin-block-end: 1.3em;
+  }
+  .ip-address,.ip-location,
+  .ip-timezone,.ip-isp{
+    font-size: 0.7em;
+    margin-block-end: 0.4rem;
+    font-weight: 600;
+}
+  .ip-details-address,.ip-details-location,
+  .ip-details-timezone,.ip-details-isp{
+    width: auto;
+    overflow-wrap: break-word;
+    font-size: 1.1em;
+    font-weight: 450;
+}
+.bottom-section{
+  height: calc(100vh - 21.75em);
+}
+}
+@media (max-width:25em){
+  .ip-details-address,.ip-details-location,
+  .ip-details-timezone,.ip-details-isp{
+    font-size: 0.9em;
+  }
+  .ip-address,.ip-location,
+  .ip-timezone,.ip-isp{
+    font-size: 0.6em;
+  }
+  .search-box{
+    flex: 1;
+  }
+}
